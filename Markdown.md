@@ -28,17 +28,17 @@ python -m venv myenv
 pip install -r requirements.txt
 
 ## Business Dashboard
-Dashboard ini memberikan visualisasi mengenai distribusi dropout berdasarkan berbagai fitur seperti nilai semester pertama dan kedua, serta jumlah kursus yang diambil. Visualisasi ini membantu dalam memahami pola dropout dan faktor-faktor yang mempengaruhinya.
+Dashboard yang saya buat di metabase ini memberikan visualisasi mengenai distribusi dropout berdasarkan fitur seperti jumlah kursus semester pertama dan kedua. Visualisasi ini membantu dalam memahami pola dropout dan faktor-faktor yang mempengaruhinya.
 
 ## Conclusion
-Dari analisis yang dilakukan, ditemukan bahwa faktor-faktor seperti nilai pada semester pertama dan kedua, serta jumlah kursus yang diambil memiliki pengaruh signifikan terhadap tingkat dropout. Model Random Forest yang dibangun menunjukkan kinerja yang baik dalam memprediksi siswa yang berisiko tinggi meninggalkan institusi, dengan akurasi sebesar 75%.
+Dari analisis yang dilakukan, ditemukan bahwa faktor-faktor seperti jumlah kursus dan evaluasi pada semester pertama dan kedua, serta nilai kualifikasi sebelumnya dan nilai penerimaan memiliki pengaruh signifikan terhadap tingkat dropout. Model Random Forest yang dibangun menunjukkan kinerja yang baik dalam memprediksi siswa yang berisiko tinggi meninggalkan institusi, dengan akurasi sebesar 73%.
 
 ## Rekomendasi Action Items
 Berikut beberapa rekomendasi action items yang dapat dilakukan perusahaan guna menyelesaikan permasalahan:
 
-1. **Meningkatkan Kualitas Pengajar:** Karena nilai pada semester pertama dan kedua merupakan faktor yang paling krusial dalam status kelulusan siswa, meningkatkan kualitas pengajar dapat membantu dalam meningkatkan prestasi akademik siswa. Pengajar yang berkualitas dapat memberikan bimbingan yang lebih baik dan membantu siswa memahami materi dengan lebih baik dan mendapatkan nilai yang lebih baik pada tiap semester.
+1. **Meningkatkan Kualitas Pengajar:** Korelasi positif yang kuat antara jumlah kursus yang diambil dan jumlah evaluasi pada kedua semester menunjukkan pentingnya kualitas pengajaran. Institusi dapat meningkatkan kualitas pengajar dan metode pengajaran untuk memastikan siswa memahami materi dengan baik dan siap menghadapi evaluasi.
 
-2. **Memberikan Standarisasi pada Jumlah Kursus yang Diambil:** Jumlah kursus yang diambil memiliki korelasi dengan tingkat dropout. Siswa yang mengambil sedikit kursus lebih rawan untuk dropout. Oleh karena itu, memberikan standarisasi pada jumlah kursus yang diambil dapat membantu mengurangi tingkat dropout. Misalnya, menetapkan jumlah minimum kursus yang harus diambil oleh setiap siswa dalam satu semester.
+2. **Memberikan Standarisasi pada Jumlah Kursus yang Diambil:** Jumlah kursus yang diambil pada semester pertama dan kedua memiliki korelasi positif yang kuat dengan jumlah kursus yang disetujui. Institusi dapat menetapkan standar minimum dan maksimum jumlah kursus yang harus diambil oleh setiap siswa per semester untuk memastikan beban akademik yang optimal dan mengurangi risiko dropout.
 
 ## Prediksi dan Penggunaan Model
 1. **Pastikan Anda memiliki file berikut dalam satu folder:**
@@ -51,12 +51,13 @@ Berikut beberapa rekomendasi action items yang dapat dilakukan perusahaan guna m
 4. **Jalankan perintah berikut untuk memulai aplikasi Streamlit:**
     - streamlit run app.py
 5. **Mengisi Nilai Input di Streamlit:**
-Di halaman aplikasi, Anda akan melihat input form untuk memasukkan nilai pada empat kolom utama:
-Berapa banyak kursus yang diambil pada kurikulum Semester 1: Masukkan jumlah kursus yang diambil pada semester 1 (contoh: 5).
-- Rata-rata nilai Semester 1: Masukkan rata-rata nilai pada semester 1 (contoh: 2.5).
-- Berapa banyak kursus yang diambil pada Semester 2: Masukkan jumlah kursus yang diambil pada semester 2 (contoh: 5).
-- Rata-rata nilai Semester 2: Masukkan rata-rata nilai pada semester 2 (contoh: 2.5).
-- Setelah semua nilai input diisi, tekan tombol "Prediksi" yang ada di halaman aplikasi.
+Di halaman aplikasi, Anda akan melihat input form untuk memasukkan nilai pada enam kolom utama:
+Jumlah kursus yang diambil pada Semester 1: Masukkan jumlah kursus yang diambil pada semester 1 (contoh: 5).
+Jumlah evaluasi pada Semester 1: Masukkan jumlah evaluasi pada semester 1 (contoh: 3).
+Jumlah kursus yang diambil pada Semester 2: Masukkan jumlah kursus yang diambil pada semester 2 (contoh: 5).
+Jumlah evaluasi pada Semester 2: Masukkan jumlah evaluasi pada semester 2 (contoh: 3).
+Nilai kualifikasi sebelumnya: Masukkan nilai kualifikasi sebelumnya (contoh: 80.5).
+Nilai penerimaan: Masukkan nilai penerimaan (contoh: 75.0).
 
 ## Link Streamlit
-- https://projectakhirdsmasterwicak.streamlit.app/ 
+- https://project-akhir-dicoding-wicak.streamlit.app/
